@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  margin: 0;
+}
+
+body {
+  background-color: turquoise;
+  display: grid;
+}
+nav {
+  font-size: x-large;
+  height: 80px;
+  background-color: rgb(23, 173, 158);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid rgb(18, 129, 117) 2px;
+}
+.main {
+  display: flex;
+  margin-top: 25px;
+}
+.sim {
+  border: solid rgb(18, 129, 117) 2px;
+  background-color: rgb(23, 173, 158);
+  border-radius: 10px;
+  margin-left: 25px;
+  height: 465px;
+}
+.sidenav {
+  height: 600px;
+  width: 12vw;
+}
+.you {
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+}
+.bot {
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+}
+.options {
+  height: 105px;
+  width: 82vw;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 250px;
+  margin-left: 25px;
+  top: 600px;
+  right: 38px;
+}
+#Rock,
+#scissor,
+#paper {
+  font-size: x-large;
+  padding: 25px;
+  border: solid rgb(18, 129, 117) 2px;
+  background-color: turquoise;
+  border-radius: 10px;
+  &:hover {
+    transform: scale(110%);
+    background-color: rgb(92, 243, 228);
+    transition-duration: 0.5s;
+  }
+}
