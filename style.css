@@ -62,7 +62,7 @@ nav {
   padding: 25px;
   border: solid rgb(18, 129, 117) 2px;
   background-color: turquoise;
-  border-radius: 10px;
+  border-radius: 11px;
   &:hover {
     transform: scale(110%);
     background-color: rgb(92, 243, 228);
