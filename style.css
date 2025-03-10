@@ -51,7 +51,9 @@ nav {
   margin: 10px;
   height: 135px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 15vw;
   border: solid rgb(18, 129, 117) 2px;
   border-radius: 10px;
