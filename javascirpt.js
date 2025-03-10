@@ -40,10 +40,13 @@ function play(u)
     
    if(randnum==u)
    {
-    document.getElementById('yourresult').innerHTML="TIE";
-    document.getElementById('botresult').innerHTML="TIE";
+    document.getElementById('yourresult').innerHTML="TIE !!";
+    document.getElementById('botresult').innerHTML="TIE !!";
    }
-   else if(u==0&&randnum==2||u==1&&randnum==2&&u==1)
+   else if(u==0&&randnum==2||u==1&&randnum==2|| randnum==0&&u==1)
+//     rock se
+//    paper rock
+//    se paper
    {
     document.getElementById('yourresult').innerHTML="YOU WIN !!";
     document.getElementById('botresult').innerHTML="BOT LOST !!";

@@ -35,24 +35,44 @@ nav {
 }
 .sidenav {
   height: 600px;
-  width: 12vw;
+  width: 17vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.point {
+  font-size: 250%;
+  /* padding: 20px;
+  margin-left: 25px; */
+}
+
+.points {
+  padding: 3px;
+  margin: 10px;
+  height: 135px;
+  display: flex;
+  justify-content: center;
+  width: 15vw;
+  border: solid rgb(18, 129, 117) 2px;
+  border-radius: 10px;
+  background-color: turquoise;
 }
 .you {
-  width: 40vw;
+  width: 38vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
 }
 .bot {
-  width: 40vw;
+  width: 38vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .options {
   height: 105px;
-  width: 82vw;
+  width: 78vw;
   position: absolute;
   display: flex;
   align-items: center;
@@ -60,7 +80,7 @@ nav {
   gap: 250px;
   margin-left: 25px;
   top: 600px;
-  right: 38px;
+  right: 21px;
 }
 #Rock,
 #scissor,
@@ -84,5 +104,5 @@ nav {
 #yourresult,
 #youbox,
 #botbox {
-  margin-top: 90px;
+  margin-top: 80px;
 }
