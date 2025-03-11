@@ -1,7 +1,7 @@
 
 let yourPoints=0;
 let botsPoints=0;
-let roundcount=1;
+let roundcount=0;  
 let roundno=0;
 let rock=document.getElementById('Rock')
 let paper=document.getElementById('paper')
@@ -9,6 +9,8 @@ let scissor=document.getElementById('scissor')
 let setRounds=document.getElementById('setRounds');
 let reset=document.getElementById('reset')
 let set=document.getElementById('set')
+
+// document.getElementById('nofrnds').innerHTML=roundcount;
 
 let yourresult=document.getElementById('yourresult')
 let botresult=document.getElementById('botresult')
@@ -69,11 +71,12 @@ function play(u)
 //    se 2
    else if(u==0&&randnum==2||u==1&&randnum==0|| u==2&&randnum==1)
    {
-    document.getElementById('yourresult').innerHTML="YOU WIN !!";
+    document.getElementById('yourresult').innerHTML="YOU WIN !! ";
     document.getElementById('botresult').innerHTML="BOT LOST !!";
     yourPoints++;
     document.getElementById('yp').innerHTML=yourPoints;
     roundcount++;
+    console.log(roundcount);
     document.getElementById('nofrnds').innerHTML=roundcount;
     
 
@@ -86,11 +89,15 @@ else
     
     document.getElementById('bp').innerHTML=botsPoints;
     roundcount++;
+    console.log(roundcount);
     document.getElementById('nofrnds').innerHTML=roundcount;
   
    }
+
    if(roundno==roundcount)
     {
+     
+    
         if(yourPoints>botsPoints)
             {
                alert("YOU WON!!");
@@ -103,6 +110,12 @@ else
                alert(`YOU LOSE !!`)
             }
      rset();
+    //  setInterval(() => {
+        
+    // }, 1000);
+     
+       
+   
      
     }
    

@@ -115,6 +115,9 @@ nav {
 
 #setRounds {
   margin: 5px;
+  height: 34.8px;
+  width: 150px;
+  font-size: larger;
   box-shadow: none;
   border: solid rgb(18, 129, 117) 2px;
   background-color: turquoise;
