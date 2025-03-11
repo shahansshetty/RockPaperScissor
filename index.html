@@ -13,15 +13,37 @@
     <div class="main">
       <div class="sidenav sim">
         <h2 class="point">POINTS</h2>
+
+        <!-- //Rounds box -->
+        <div class="points" style="font-size: 200%">
+          ROUNDS
+          <p id="nofrnds" style="display: block">0</p>
+        </div>
+
+        <!-- YOUR points -->
         <div class="points" style="font-size: 200%">
           YOU
           <p id="yp" style="display: block">0</p>
         </div>
+
+        <!-- bot points -->
         <div class="points" style="font-size: 200%">
           BOT
           <p id="bp">0</p>
         </div>
+
+        <!-- //set rounds box/reset box -->
         <div class="points">
+          <div class="setui">
+            <input
+              type="number"
+              placeholder="set rounds"
+              id="setRounds"
+              value="5"
+            />
+            <input type="button" value="SET" id="set" />
+          </div>
+
           <input type="button" value="reset" id="reset" />
         </div>
       </div>
