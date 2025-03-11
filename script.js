@@ -17,7 +17,7 @@ let youbox=document.getElementById('youbox')
 set.addEventListener('click',  function()
 {
     rset();
-    roundno=setRounds.value ;
+    roundno=(parseInt(setRounds.value)) ;
     console.log(roundno)
     // setRounds.value=" ";
     
@@ -91,7 +91,19 @@ else
    }
    if(roundno==roundcount)
     {
+        if(yourPoints>botsPoints)
+            {
+               alert("YOU WON!!");
+            }
+            else if(yourPoints==botsPoints)
+            {
+                alert(`TIE !!`)
+            }
+            else{
+               alert(`YOU LOSE !!`)
+            }
      rset();
+     
     }
    
 }
