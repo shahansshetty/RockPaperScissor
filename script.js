@@ -1,10 +1,10 @@
 
 let yourPoints=0;
 let botsPoints=0;
-let roundcount=0;
+let roundcount=1;
 let roundno=0;
 let rock=document.getElementById('Rock')
-let paperb=document.getElementById('paper')
+let paper=document.getElementById('paper')
 let scissor=document.getElementById('scissor')
 let setRounds=document.getElementById('setRounds');
 let reset=document.getElementById('reset')
@@ -16,18 +16,17 @@ let youbox=document.getElementById('youbox')
 
 set.addEventListener('click',  function()
 {
-    if(setRounds.value=="")
-        setRounds.value=5;
-    else 
-     roundno=parseInt(setRounds.value) ;
-    setRounds.value=" ";
-   
+    rset();
+    roundno=setRounds.value ;
+    console.log(roundno)
+    // setRounds.value=" ";
+    
 })
 
 rock.addEventListener('click',function()
 {
-    // document.getElementById('yourresult').innerHTML=" ";
-    // document.getElementById('botresult').innerHTML=" ";
+    document.getElementById('yourresult').innerHTML=" ";
+    document.getElementById('botresult').innerHTML=" ";
     document.getElementById('youbox').innerHTML="🪨";
     let u=0;
     play(u)
@@ -35,13 +34,15 @@ rock.addEventListener('click',function()
 })
 
 paper.addEventListener('click',function(){
-    
+    document.getElementById('yourresult').innerHTML=" ";
+    document.getElementById('botresult').innerHTML=" ";
     document.getElementById('youbox').innerHTML="✋🏼";
     let u=1;
     play(u)
 })
 scissor.addEventListener('click',function(){
-    
+    document.getElementById('yourresult').innerHTML=" ";
+    document.getElementById('botresult').innerHTML=" ";
     document.getElementById('youbox').innerHTML="✂️";
     let u=2;
     play(u)
@@ -74,6 +75,7 @@ function play(u)
     document.getElementById('yp').innerHTML=yourPoints;
     roundcount++;
     document.getElementById('nofrnds').innerHTML=roundcount;
+    
 
    }
 else   
@@ -85,17 +87,16 @@ else
     document.getElementById('bp').innerHTML=botsPoints;
     roundcount++;
     document.getElementById('nofrnds').innerHTML=roundcount;
+  
    }
-   if(roundcount==roundno)
+   if(roundno==roundcount)
     {
-     reset();
+     rset();
     }
    
 }
 
-
-
-reset.addEventListener('click', async function reset()
+function rset()
 {
  yourPoints=0;
  botsPoints=0;
@@ -105,4 +106,12 @@ document.getElementById('bp').innerHTML=botsPoints;
 document.getElementById('nofrnds').innerHTML=roundcount;
 
 
+}
+
+reset.addEventListener('click',function()
+{
+    rset();
 })
+
+
+   
