@@ -21,6 +21,7 @@ set.addEventListener('click',  function()
     rset();
     roundno=(parseInt(setRounds.value)) ;
     console.log(roundno)
+    
     // setRounds.value=" ";
     
 })
@@ -64,6 +65,8 @@ function play(u)
    {
     document.getElementById('yourresult').innerHTML="TIE !!";
     document.getElementById('botresult').innerHTML="TIE !!";
+    document.getElementById('yourresult').setAttribute("style","color: grey")
+    document.getElementById('botresult').setAttribute("style","color: grey")
 
    }
    //     rock 0
@@ -72,8 +75,12 @@ function play(u)
    else if(u==0&&randnum==2||u==1&&randnum==0|| u==2&&randnum==1)
    {
     document.getElementById('yourresult').innerHTML="YOU WIN !! ";
+    document.getElementById('yourresult').setAttribute("style","color: limegreen")
     document.getElementById('botresult').innerHTML="BOT LOST !!";
+    document.getElementById('botresult').setAttribute("style","color: red")
     yourPoints++;
+    
+
     document.getElementById('yp').innerHTML=yourPoints;
     roundcount++;
     console.log(roundcount);
@@ -84,7 +91,9 @@ function play(u)
 else   
 {
     document.getElementById('yourresult').innerHTML="YOU LOST !!";
+    document.getElementById('yourresult').setAttribute("style","color: red")
     document.getElementById('botresult').innerHTML="BOT WON !!";
+    document.getElementById('botresult').setAttribute("style","color: limegreen")
     botsPoints++;
     
     document.getElementById('bp').innerHTML=botsPoints;
@@ -98,26 +107,49 @@ else
     {
      
     
+           
+    //  setInterval(() => {
+        
+    // }, 1000);
+    setTimeout(()=>{
         if(yourPoints>botsPoints)
             {
                alert("YOU WON!!");
             }
             else if(yourPoints==botsPoints)
-            {
+            {if(roundcount!=0)
                 alert(`TIE !!`)
             }
             else{
                alert(`YOU LOSE !!`)
             }
-     rset();
-    //  setInterval(() => {
-        
-    // }, 1000);
-     
-       
-   
-     
+     rset();    
+
+
+
+    },100)
+
+
+
     }
+
+    if(yourPoints==botsPoints)
+        {
+           document.getElementById('yp').setAttribute("style","color: gray")
+           document.getElementById('bp').setAttribute("style","color: gray")
+
+       }
+       else if(yourPoints>botsPoints)
+       {
+           
+           document.getElementById('yp').setAttribute("style","color: limegreen")
+           document.getElementById('bp').setAttribute("style","color: red")
+       }
+       else{
+           document.getElementById('yp').setAttribute("style","color: red")
+           document.getElementById('bp').setAttribute("style","color: limegreen")
+           
+        }
    
 }
 
@@ -129,6 +161,8 @@ function rset()
 document.getElementById('yp').innerHTML=yourPoints;
 document.getElementById('bp').innerHTML=botsPoints;
 document.getElementById('nofrnds').innerHTML=roundcount;
+document.getElementById('yp').setAttribute("style","color: white")
+     document.getElementById('bp').setAttribute("style","color: white")
 
 
 }
